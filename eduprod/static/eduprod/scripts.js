@@ -16,6 +16,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+     
+     function shuffleQuestions() {                                        // <---- Function to shuffle the questions array
+         for (let i = questions.length - 1; i > 0; i--) {
+             const j = Math.floor(Math.random() * (i + 1));
+             [questions[i], questions[j]] = [questions[j], questions[i]];
+         }
+     }
+
+    shuffleQuestions();
     displayQuestion();
 
     btn.addEventListener("click", function() {
@@ -24,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
             answerElement.style.display = "block";
             btn.textContent = "Next Question";
         } else {
-            currentQuestionIndex+= Math.floor(Math.random() * questions.length) + 1;
+            currentQuestionIndex++;
             displayQuestion();
         }
     });
