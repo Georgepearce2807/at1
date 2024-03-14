@@ -1,3 +1,3 @@
 body { font-family: Arial, sans-serif; padding: 20px; }
-.question, .answer { margin: 20px; font-size: 10px; }
+.question, .answer { margin: 20px; font-size: 15px; }
 #revealBtn { margin: 20px; font-size: 16px; cursor: pointer; }
