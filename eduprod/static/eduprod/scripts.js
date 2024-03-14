@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let currentQuestionIndex = Math.floor(Math.random() * questions.length);
+    let currentQuestionIndex = 0;
     const questions = JSON.parse(document.getElementById('content').getAttribute('data-questions'));
     const content = document.getElementById('content');
     const btn = document.getElementById('revealBtn');
