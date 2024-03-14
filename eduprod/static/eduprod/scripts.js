@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             content.innerHTML = `<div class='question'>Question: ${question}</div><div class='answer' style='display: none;'>Answer: ${answer}</div>`;
             btn.textContent = "Reveal Answer";
         } else {
+            content.innerHTML = "Reset quiz";
             let currentQuestionIndex = 0;
             btn.textContent = "Reset";
         }
