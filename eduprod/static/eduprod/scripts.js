@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             answerElement.style.display = "block";
             btn.textContent = "Next Question";
         } else {
-            currentQuestionIndex++;
+            currentQuestionIndex+= Math.floor(Math.random() * questions.length) + 1;
             displayQuestion();
         }
     });
