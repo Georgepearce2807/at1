@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let currentQuestionIndex = 0;
+    let currentQuestionIndex = Math.floor(Math.random() * questions.length) + 1;
     const questions = JSON.parse(document.getElementById('content').getAttribute('data-questions'));
     const content = document.getElementById('content');
     const btn = document.getElementById('revealBtn');
@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
             btn.textContent = "Reveal Answer";
         } else {
             content.innerHTML = "Reset quiz";
-            let currentQuestionIndex = 0;
             btn.textContent = "Reset";
         }
     }
