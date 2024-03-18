@@ -1,7 +1,27 @@
-{% extends "eduprod/layout.html" %}
-{% block body %}
-<div class="square">
-    <div id="content" data-questions='{{ questions_json|safe }}'></div>
-    <button id="revealBtn">Reveal Answer</button> 
-</div>
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q&A</title>
+        <link href="{% static 'eduprod/styles.css' %}" rel="stylesheet">
+        <script src="{% static 'eduprod/scripts.js' %}" defer></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="{% url 'ratel' %}">Ratel</a></li>
+                <li><a href="#">Fieldcraft</a></li>
+                <li><a href="#">Navigation</a></li>
+                <li><a href="{% url 'quiz' %}">Quiz</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>Cadet Basic Revision Webpage</h1>
+            <p>
+                This page is dedicated to basic cadet revision, and all of its content should be understood by cadets aiming to earn and be applicable for a Rank.
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratel</title>
+    <link href="{% static 'eduprod/styles.css' %}" rel="stylesheet">
+    <script src="{% static 'eduprod/scripts.js' %}" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="#">Fieldcraft</a></li>
+            <li><a href="#">Navigation</a></li>
+            <li><a href="{% url 'quiz' %}">Quiz</a></li>
+        </ul>
+    </nav>
+    <h1>Radio Telecommunications</h1>
+    <p>
+        Radio Telecommunications (Ratel), a method of communicating over a radio used in the Australian Army and Australian Army Cadets. 
+        Ratel is used in most field exercises and has a strict code that must be followed
+    </p>
+</body>
