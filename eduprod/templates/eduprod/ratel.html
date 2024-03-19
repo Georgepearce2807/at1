@@ -12,14 +12,22 @@
     <nav>
         <ul>
             <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'ratel' %}">Ratel</a></li>
             <li><a href="#">Fieldcraft</a></li>
             <li><a href="#">Navigation</a></li>
-            <li><a href="{% url 'quiz' %}">Quiz</a></li>
+            <li><a href="{% url 'quiz' %}">First Aid</a></li>
         </ul>
     </nav>
-    <h1>Radio Telecommunications</h1>
-    <p>
-        Radio Telecommunications (Ratel), a method of communicating over a radio used in the Australian Army and Australian Army Cadets. 
-        Ratel is used in most field exercises and has a strict code that must be followed
-    </p>
+    <div class="container">
+        <h1>Radio Telecommunications</h1>
+        <p>
+            Radio Telecommunications (Ratel), a method of communicating over a radio used in the Australian Army and Australian Army Cadets. 
+            Ratel is used in most field exercises and has a strict code that must be followed
+        </p>
+        <br>
+        <h1>Common Radio Procedures</h1>
+        <p>Casualty Evacuations (CASEVACS), Location Statements (LOCSTATS), and Radio Checks are all common radio procedures carried out whilst participating in a Ratel Activity</p>
+        <img src="{% static 'eduprod/CASEVAC.png' %}" alt="CASEVAC Reference">
+        <img src="{% static 'eduprod/LOCSTAT.png' %}" alt="LOCSTAT Reference">
+    </div>
 </body>

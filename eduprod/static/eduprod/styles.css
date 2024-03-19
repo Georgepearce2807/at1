@@ -1,23 +1,42 @@
-body { 
-    font-family: Arial, sans-serif; padding: 20px; 
+.container {
+    width: 75%; 
+    margin: 50px auto; 
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-height: 100%; 
+    overflow-y: auto; 
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.pageInfo { 
+    font-family: Arial, sans-serif; padding: 0px; 
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
-    background-color: #ffffff
- 
+    width: 100px;
+
 }
 
+.will{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.question, .answer { 
+    margin: 20px; font-size: 18px; 
+}
 
-.question, .answer { margin: 20px; font-size: 18px; }
-
-#revealBtn { margin: 20px; font-size: 16px; cursor: pointer; }
+#revealBtn { 
+    margin: 20px; font-size: 16px; cursor: pointer;
+ }
 
 nav {
     background-color: #333;
     position: fixed;
-    width: 100%;
+    width: 110%;
     top: 0;
 }
 
@@ -42,11 +61,6 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-.container {
-    width: 80%; 
-    margin: 50px auto; 
-    border: 1px solid #ccc;
-    padding: 20px;
-    max-height: 400px; 
-    overflow-y: auto; 
+body {
+    background-color: #dadada;
 }
