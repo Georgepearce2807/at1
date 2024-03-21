@@ -1,6 +1,7 @@
 from django.core import serializers
 from django.shortcuts import render
 from .models import Question
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'eduprod/index.html')
@@ -11,4 +12,4 @@ def ratel(request):
 def quiz(request):
     questions = Question.objects.all()
     questions_json = serializers.serialize('json', questions)
-    return render(request, 'eduprod/quiz.html', {'questions_json': questions_json}) 
+    return render(request, 'eduprod/index.html', {'questions_json': questions_json})
