@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q&A</title>
+    <link href="{% static 'users/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'eduprod:index' %}">Home</a></li>
+            <li class="dropdown"><a>Content</a>
+                <div class="dropdown-content">
+                    <a href="{% url 'eduprod:ratel' %}">Ratel</a>
+                    <a href="{% url 'eduprod:fieldcraft' %}">Fieldcraft</a>
+                    <a href="{% url 'eduprod:navigation' %}">Navigation</a>
+                    <a href="{% url 'eduprod:quiz' %}">First Aid</a>
+                </div>
+            </li>
+            <li class="dropdown"><a>Lesson Plans</a>
+                <div class="dropdown-content">
+                    <a href="#haha_youre_dumb_asf#">Ratel</a>
+                    <a href="#">Fieldcraft</a>
+                    <a href="#">Navigation</a>
+                    <a href="#">First Aid</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+       <h2>Login to Access the Database:</h2>
+        {% if messages %}
+            <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %} style="display: inline-block;">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        <div class="container">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>

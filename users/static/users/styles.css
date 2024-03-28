@@ -6,11 +6,12 @@
     max-height: 100%; 
     overflow-y: auto; 
     background-color: #fff;
-    border-radius: 7px;
+    border-radius: 0px;
 }
 
+
 .pageInfo { 
-    font-family: Arial, sans-serif; padding: 0px; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding: 0px; 
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -36,24 +37,25 @@
 nav {
     background-color: #333;
     position: fixed;
-    width: 110%;
+    width: 100%;
     top: 0;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: auto;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul li a {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
+    position: relative;
     color: #fff;
 }
 
@@ -63,4 +65,42 @@ nav ul li a:hover {
 
 body {
     background-color: #dadada;
+}
+
+.user-info {
+    display: inline-block;
+}
+
+.logout {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #333;
+    margin-right: 5px;
+}
+
+.logout:hover {
+    background-color: #555;
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #332;
+    width: 100%;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
 }

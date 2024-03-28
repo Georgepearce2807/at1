@@ -1,29 +1,7 @@
+{% extends "eduprod/layout.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q&A - First Aid</title>
-    <link href="{% static 'eduprod/styles.css' %}" rel="stylesheet">
-    <script src="{% static 'eduprod/scripts.js' %}" defer></script>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'ratel' %}">Ratel</a></li>
-            <li><a href="#">Fieldcraft</a></li>
-            <li><a href="#">Navigation</a></li>
-            <li><a href="{% url 'quiz' %}">First Aid</a></li>
-        </ul>
-    </nav>
-    <br>
-    <div class="container">
-        <div id="content" data-questions='{{ questions_json|safe }}'></div>
-        <button id="revealBtn">Reveal Answer</button> 
-    </div>
-   
-</body>
-</html>
+{% block body %}
+    <div id="content" data-questions='{{ questions_json|safe }}'></div>
+    <button id="revealBtn">Reveal Answer</button> 
+{% endblock %}
 
